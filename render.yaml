@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run start:prod
+    envVars:
+      - key: FIREBASE_TYPE
+        fromDatabase: FIREBASE_TYPE
+      - key: FIREBASE_PROJECT_ID
+        fromDatabase: FIREBASE_PROJECT_ID
+      - key: FIREBASE_PRIVATE_KEY_ID
+        fromDatabase: FIREBASE_PRIVATE_KEY_ID
+      - key: FIREBASE_PRIVATE_KEY
+        fromDatabase: FIREBASE_PRIVATE_KEY
+      - key: FIREBASE_CLIENT_EMAIL
+        fromDatabase: FIREBASE_CLIENT_EMAIL
+      - key: FIREBASE_CLIENT_ID
+        fromDatabase: FIREBASE_CLIENT_ID
+      - key: FIREBASE_AUTH_URI
+        fromDatabase: FIREBASE_AUTH_URI
+      - key: FIREBASE_TOKEN_URI
+        fromDatabase: FIREBASE_TOKEN_URI
+      - key: FIREBASE_AUTH_PROVIDER_X509_CERT_URL
+        fromDatabase: FIREBASE_AUTH_PROVIDER_X509_CERT_URL
+      - key: FIREBASE_CLIENT_X509_CERT_URL
+        fromDatabase: FIREBASE_CLIENT_X509_CERT_URL
