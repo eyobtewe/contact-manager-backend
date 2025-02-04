@@ -2,3 +2,4 @@
 /.env
 /README.md
 /test.http
+/node_modules
